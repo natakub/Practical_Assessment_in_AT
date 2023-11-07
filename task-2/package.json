@@ -1,14 +1,16 @@
 {
   "name": "task-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Task 2 of Practical assessment in AT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.js"
+    "test": "wdio run src/config/wdio.conf.js",
+    "test1": "wdio run src/config/wdio.conf.js --mochaOpts.grep=@test1",
+    "test2": "wdio run src/config/wdio.conf.js --mochaOpts.grep=@test2",
+    "test3": "wdio run src/config/wdio.conf.js --mochaOpts.grep=@test3"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nataliia Kubytska",
   "license": "ISC",
   "devDependencies": {
     "@wdio/cli": "^8.21.0",

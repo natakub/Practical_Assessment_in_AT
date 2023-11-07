@@ -1,21 +1,11 @@
-const { $ } = require("@wdio/globals");
-const Page = require("./page");
-const { Button } = require("../../controls/button");
+const BasePage = require("./base.page");
+const { LoginForm } = require("../components");
 
-class LoginPage extends Page {
-  get usernameInput() {
-    return;
-  }
-
-  get passwordInput() {}
-
-  get submitBtn() {
-    return new Button("#login-button");
-  }
-
-  async open() {
-    await super.open();
+class LoginPage extends BasePage {
+  constructor() {
+    super("https://www.saucedemo.com/");
+    this.loginForm = new LoginForm();
   }
 }
 
-module.exports = new LoginPage();
+module.exports = LoginPage;

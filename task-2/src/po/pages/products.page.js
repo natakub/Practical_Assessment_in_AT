@@ -1,8 +1,8 @@
-const HeaderComponent = require("../components/common/header.component");
+const BasePage = require("./base.page");
 
-class ProductsPage {
+class ProductsPage extends BasePage {
   constructor() {
-    this.header = new HeaderComponent();
+    super();
   }
 }
 

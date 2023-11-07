@@ -1,4 +1,4 @@
-module.export = class Button {
+class Button {
   constructor(selector) {
     this.selector = selector;
   }
@@ -18,4 +18,6 @@ module.export = class Button {
     });
     await this.element.click();
   };
-};
+}
+
+module.exports = Button;

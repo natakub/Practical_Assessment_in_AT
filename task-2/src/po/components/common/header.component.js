@@ -1,6 +1,8 @@
-class HeaderComponent {
-  get rootEl() {
-    return $(".primary_header");
+const BaseComponent = require("./base.component");
+
+class HeaderComponent extends BaseComponent {
+  constructor() {
+    super(".primary_header");
   }
 
   get logo() {
@@ -8,4 +10,4 @@ class HeaderComponent {
   }
 }
 
-module.export = HeaderComponent;
+module.exports = HeaderComponent;
