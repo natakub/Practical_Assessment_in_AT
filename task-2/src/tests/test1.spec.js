@@ -15,9 +15,7 @@ describe("@test1 - Login form with empty credentials", () => {
       loginForm.input("username"),
       loginForm.input("password")
     );
-
     await loginForm.loginBtn.waitAndClick();
-
     //3. Check the error messages: 3.1 Username is required.
     await expect(loginForm.errorMessage).toHaveText(
       "Epic sadface: Username is required"
